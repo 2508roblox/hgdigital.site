@@ -1,0 +1,136 @@
+.ova-price {
+	background: #1D1F21;
+	border-radius: 14px;
+	padding-bottom: 10px;
+	overflow: hidden;
+	&.is-active {
+		background: #6844ED;
+		.link {
+			border-color: #fff;
+		}
+		.list {
+			.item {
+				.content {
+					i {
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+	.info {
+		padding: 40px;
+	}
+	.title {
+		margin: 0;
+		font-size: 24px;
+		font-weight: 500;
+		line-height: 1.5;
+		letter-spacing: -0.72px;
+		color: #fff;
+	}
+	.price {
+		margin: 0;
+		margin-top: 15px;
+		.number {
+			font-size: 48px;
+			font-style: italic;
+			font-weight: 700;
+			line-height: 28px;
+			color: #fff;
+		}
+		.after_number {
+			color: #fff;
+			font-size: 20px;
+			font-style: italic;
+			font-weight: 700;
+			line-height: 28px;
+		}
+	}
+
+	.desc {
+		margin: 0;
+		margin-top: 25px;
+		color: #fff;
+		line-height: 28px;
+	}
+
+	.link {
+		margin-top: 30px;
+		display: inline-block;
+		color: #fff;
+		font-weight: 700;
+		padding: 10px 30px;
+		border-radius: 14px;
+		border: 1.5px solid rgba(255, 255, 255, 0.15);
+		position: relative;
+		overflow: hidden;
+		transition: all .3s linear;
+		&:before {
+		    position: absolute;
+		    content: '';
+		    display: inline-block;
+		    top: -180px;
+		    left: 0;
+		    width: 30px;
+		    height: 100%;
+		    background-color: #fff;
+		    animation: ova_shiny 5s ease-in-out infinite;
+		}
+		&:hover{
+			box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+		}
+		i {
+			vertical-align: middle;
+			margin-left: 7px;
+			font-size: 12px;
+		    line-height: 1;
+		    display: inline-flex;
+		}
+	}
+
+	.list {
+		margin: 0px 10px 0px 10px;
+		padding: 40px 40px 30px 40px;
+		list-style: none;
+		border-radius: inherit;
+		overflow: hidden;
+		border: 1px solid rgba(255, 255, 255, 0.15);
+		background: linear-gradient(175deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.05) 100%);
+		li:not(:first-child) {
+			margin-top: 20px;
+		}
+		.item {
+			.content {
+				margin: 0;
+				vertical-align: middle;
+				text-align: left;
+				.text {
+					margin-left: 12px;
+					color: #fff;
+					line-height: 28px;
+					.highlight {
+						font-weight: 700;
+					}
+				}
+				i {
+					display: inline-flex;
+					color: #6844ED;
+					font-size: 20px;
+					line-height: 1;
+				}
+				svg {
+					width: 20px;
+					height: 20px;
+				}
+			}
+		}
+	}
+}
+
+@-webkit-keyframes ova_shiny {
+    0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+    80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
+    81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
+    100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
+}

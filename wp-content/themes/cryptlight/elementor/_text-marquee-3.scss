@@ -1,0 +1,87 @@
+.ova-text-marquee-3{
+	position: relative;
+    overflow: hidden;
+
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+
+	.content-wrapper, .content-wrapper-2{
+		width: 200%;
+		.text{
+        	font-size: 110px;
+        	font-weight: 700;
+        	line-height: 1;
+        	text-transform: uppercase;
+        	color: transparent;
+        	width: 200%;
+
+        	background: linear-gradient(163deg, #FF8556 0%, #E1D1E5 54.76%, #60DFAE 92.26%);
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			-webkit-background-clip:text;
+
+			&.text-color {
+				color: var(--heading);
+			}
+
+        	@media(max-width:1024px){
+				font-size: 80px;
+			}
+			@media(max-width:767px){
+				font-size: 50px;
+			}
+		}
+	}
+
+	.content-wrapper {
+		animation: ova_scroll 20s linear infinite;
+		animation-delay: -20s;
+	}
+
+	.spacing {
+		-webkit-box-flex: 1;
+	    -ms-flex-positive: 1;
+	    flex-grow: 1;
+	    width: 500px;
+	}
+
+	.content-wrapper-2 {
+		animation: ova_scroll2 20s linear infinite;
+		animation-delay: -10s;
+	}
+
+	&.duration-none {
+		.content-wrapper {
+			animation: none;
+		}
+
+		.content-wrapper-2 {
+			animation: none;
+		}
+	}
+
+	&.duration-slow{
+		.content-wrapper {
+			animation: ova_scroll 30s linear infinite;
+			animation-delay: -30s;
+		}
+
+		.content-wrapper-2 {
+			animation: ova_scroll2 30s linear infinite;
+			animation-delay: -15s;
+		}
+	}
+
+	&.duration-fast{
+		.content-wrapper {
+			animation: ova_scroll 10s linear infinite;
+			animation-delay: -10s;
+		}
+
+		.content-wrapper-2 {
+			animation: ova_scroll2 10s linear infinite;
+			animation-delay: -5s;
+		}
+	}
+}

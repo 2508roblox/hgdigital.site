@@ -1,0 +1,123 @@
+.ova-author-box {
+    position: relative;
+    overflow: hidden;
+     
+    .description {
+        color: #fff;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 36px;
+        margin-bottom: 60px;
+    }
+
+    .info-img {
+        display: flex;
+        column-gap: 32px; 
+        align-items: center;
+        position: relative;
+        padding-left: 72px;
+        margin-bottom: 60px; 
+        @media (max-width: 520px) {
+            flex-direction: column;
+            padding-left: 42px;
+            margin-bottom: 20px; 
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #C7FF00;
+            width: 60px;
+            height: 5px;
+        }
+
+         .author-img {
+            display: block;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+
+          .info {
+                margin: 0;
+                padding-left: 32px; 
+                border-left: 1px solid #a8a8a8;
+                text-align: left;
+                width: 100%;
+                height: auto;
+                -moz-transition: all .4s ease;
+                -webkit-transition: all all .4s ease;
+                transition: all .4s ease;
+                @media (max-width: 520px) {
+                    padding-left: 10px;
+                    border-left: unset;
+                    text-align: center;
+                }
+
+               .name {
+                    color: #c7ff00;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 40px;
+                    margin-bottom: 12px;
+               }
+               .job {
+                    color: #fff;
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 27px;
+               }
+            }
+    }
+
+    .list-icon {
+        padding: 0;
+        -moz-transition: all .4s ease;
+        -webkit-transition: all all .4s ease;
+        transition: all .4s ease;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            @media (max-width: 520px) {
+                text-align: center;
+            }
+
+            .item {
+                display: inline-block;
+
+                &:not(:last-child) {
+                    margin-right: 12px;
+                }
+
+                a {
+                    width: 40px;
+                    height: 40px;
+                    background-color: transparent;
+                    border-radius: 6px;
+                    color: #fff;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    -moz-transition: all .3s ease;
+                    -webkit-transition: all .3s ease;
+                    transition: all .3s ease;
+
+                    i {
+                        font-size: 18px;
+                        line-height: 1;
+                    }
+
+                    &:hover {
+                        background-color: #2b2b2b;
+                        color: #c7ff00;
+                    }
+                }
+            }
+        }
+    } 
+}

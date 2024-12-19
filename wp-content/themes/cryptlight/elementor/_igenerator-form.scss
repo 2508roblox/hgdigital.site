@@ -1,0 +1,108 @@
+.ova-igenerator-form {
+    margin: 0 auto;
+    max-width: 800px;
+
+    .igenerator_form_field_inner {
+        position: relative;
+        width: 100%;
+         @media (max-width: 580px) {
+            text-align: center;
+        }
+
+        .igenerator_form_field_prompt_text {
+            font-size: 17px;
+            line-height: 1.2;
+            font-weight: 500;
+            padding: 0 25% 0 25px;
+            background-color: #fff;
+            box-shadow: 0 4px 33px rgba(0,0,0,0.1);
+            height: 84px;
+            border: none;
+            border-radius: 9px;
+            width: 100%;
+            text-overflow: ellipsis;
+            &::placeholder {
+                color: #515463;
+                opacity: 0.8;
+            }
+            @media (max-width: 767px) {
+                font-size: 14px;
+                padding: 0 25px;
+            }
+        }
+        .igenerator_form_field_prompt_button {
+            transition: all .3s ease;
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            display: inline-flex;
+            align-items: center;
+            padding: 0 42px;
+            height: 64px;
+            line-height: 1;
+            border-radius: 7px;
+            border: 1px solid transparent;
+            color: #fff;
+            background-color: var(--primary);
+            &:hover {
+                transition: all .3s ease;
+                border: 1px solid var(--primary);
+                color: var(--primary);
+                background-color: #fff;
+            }
+            @media (max-width: 580px) {
+                position: static;
+                transform: unset;
+                margin: 15px 0 0 0;
+            }
+        }
+    }
+
+    .igenerator_form_field_tags {
+        margin-top: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        @media (max-width: 767px) {
+            flex-direction: column;
+        }
+        .label {
+            font-size: 18px;
+            line-height: 1;
+            font-weight: 500;
+            color: #C7CAE4;
+        }
+        .igenerator_form_field_tags_list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            column-gap: 12px;
+            row-gap: 6px;
+            .tags_item {
+                transition: all .3s ease;
+                display: inline-block;
+                padding: 10px 14px;
+                font-size: 15px;
+                line-height: 1;
+                font-weight: 500;
+                text-transform: capitalize;
+                border-radius: 5px;
+                color: #E0DBFF;
+                background-color: #181832;
+                cursor: pointer;
+                &:hover {
+                    transition: all .3s ease;
+                    color: #fff;
+                    background-color: var(--primary);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.ova-image-slider {
+	.image-slider{
+		.owl-stage-outer {
+			padding-bottom: 36px;
+		}
+		.card {
+			height: 112px;
+			background: #fff;
+			box-shadow: rgba(16, 23, 54, 0.03) 0px 24px 16px 0px;
+			border-radius: 10px;
+			overflow: hidden;
+			.img {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 100%;
+				img {
+					width: auto;
+					max-width: 100%;
+				}
+			}
+		}
+	}
+}

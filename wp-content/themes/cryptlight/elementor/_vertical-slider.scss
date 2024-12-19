@@ -1,0 +1,136 @@
+.ova-vertival-slider {
+	position: relative;
+	.vertival-slider {
+		.owl-stage-outer {
+			box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 26px;
+			overflow: hidden;
+			border-radius: 13px;
+			border: 1px solid #F7E9FA;
+			background: #fff;
+		}
+		.owl-carousel, .owl-carousel .owl-item {
+			background: #fff;
+		}
+		.card {
+			position: relative;
+			padding: 95px 50px;
+			background: #FFF;
+			@media screen and (max-width: 767px) {
+				padding: 45px 30px;
+			}
+			.number {
+				position: absolute;
+				top: 37px;
+				right: 70px;
+				font-size: 42px;
+				font-weight: 800;
+				line-height: 93px;
+				background: linear-gradient(135deg, #7F29F5 0%, #7E4EFF 45.64%, #FF6EF9 100%);
+				background-clip: text;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				@media screen and (max-width: 1200px) {
+					display: none;
+				}
+			}
+			.wrapper {
+				display: flex;
+				align-items: center;
+				gap: 40px;
+				@media screen and (max-width: 1200px) {
+					flex-wrap: wrap;
+				}
+				.image {
+					flex: 0 0 454px;
+					height: auto;
+					border-radius: 16px;
+					overflow: hidden;
+					@media screen and (max-width: 767px) {
+						flex: 0 0 100%;
+					}
+				}
+				.subtitle {
+					margin: 0;
+					display: inline-block;
+					padding: 5px 17px;
+					color: #2D2020;
+					font-weight: 700;
+					line-height: 1.2;
+					text-transform: uppercase;
+					border-radius: 15.5px;
+					border: 1px dashed #000;
+				}
+				.title {
+					margin: 0;
+					margin-top: 22px;
+					color: #160647;
+					font-size: 42px;
+					font-weight: 700;
+					white-space: pre-wrap;
+					line-height: 1.2;
+					@media screen and (max-width: 480px) {
+						font-size: 32px;
+					}
+				}
+				.description {
+					margin: 0;
+					margin-top: 28px;
+					color: #616485;
+					line-height: 30px;
+					letter-spacing: -0.32px;
+				}
+				.text-button {
+					transition: all .3s ease;
+					display: inline-block;
+					margin-top: 25px;
+					padding: 12px 25px;
+					background-color: var(--primary);
+					border-radius: 10px;
+					color: #fff;
+					font-weight: 500;
+					&:hover {
+						transition: all .3s ease;
+						background-color: var(--heading);
+					}
+				}
+			}
+		}
+		.owl-dots {
+			position: absolute;
+			top: 50%;
+			right: -80px;
+			transform: translateY(-50%);
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			gap: 32px;
+			padding: 23px 19px;
+			border-radius: 23px;
+			border: 1px solid #F4F5F6;
+			background: #FFF;
+			box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.06);
+			overflow: hidden;
+			.owl-dot {
+				outline: none;
+				span{
+					width: 8px;
+					height: 8px;
+					background: #E0E0E0;
+					display: block;
+					-webkit-backface-visibility: visible;
+					transition: opacity .2s ease;
+					border-radius: 30px;
+				}
+				&.active {
+					span {
+						border-radius: 50%;
+						background: #04D493;
+						opacity: 1;
+					}
+				}
+			}
+		}
+
+	}
+
+}

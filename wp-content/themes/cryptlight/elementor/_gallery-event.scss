@@ -1,0 +1,216 @@
+.ova-gallery-event{
+
+	&.four_column {
+		.wrap-content{
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+		    grid-template-areas:
+	        "sm-12-1 lg-12-1 md-12-1 md-12-2"
+	        "sm-12-1 lg-12-1 lg-12-2 md-12-3"
+	        "sm-12-2 lg-12-1 lg-12-2 md-12-3"
+	        "sm-12-2 md-12-4 lg-12-2 md-12-3";
+
+	        @media (max-width: 1230px) {
+				grid-template-columns: 1fr 1fr 1fr;
+			    grid-template-areas:
+		        "sm-12-1 sm-12-1 lg-12-1"
+		        "md-12-1 md-12-2 md-12-2"
+		        "sm-12-2 md-12-4 md-12-3"
+		        "lg-12-2 lg-12-2 md-12-3";
+			}
+
+	        @media (max-width: 1024px) {
+				grid-template-columns: 1fr 1fr;
+			    grid-template-areas:
+		        "sm-12-1 lg-12-1"
+		        "md-12-1 md-12-2"
+		        "sm-12-2 md-12-4"
+		        "lg-12-2 md-12-3"
+			}
+
+			@media (max-width: 630px) {
+				grid-template-columns: 1fr;
+			    grid-template-areas:
+		        "sm-12-1" 
+		        "lg-12-1"
+		        "md-12-1"
+		        "md-12-2"
+		        "sm-12-2"
+		        "md-12-4"
+		        "lg-12-2"
+		        "md-12-3";
+			}
+		}
+	}
+
+	&.three_column {
+		.wrap-content{
+			grid-template-columns: 1fr 1fr 1fr;
+		    grid-template-areas:
+	        "sm-12-1 sm-12-1 lg-12-1"
+	        "md-12-1 md-12-2 md-12-2"
+	        "sm-12-2 md-12-4 md-12-3"
+	        "lg-12-2 lg-12-2 md-12-3";
+
+	        @media (max-width: 1024px) {
+				grid-template-columns: 1fr 1fr;
+			    grid-template-areas:
+		        "sm-12-1 lg-12-1"
+		        "md-12-1 md-12-2"
+		        "sm-12-2 md-12-4"
+		        "lg-12-2 md-12-3";
+			}
+
+			@media (max-width: 630px) {
+				grid-template-columns: 1fr;
+			    grid-template-areas:
+		        "sm-12-1" 
+		        "lg-12-1"
+		        "md-12-1"
+		        "md-12-2"
+		        "sm-12-2"
+		        "md-12-4"
+		        "lg-12-2"
+		        "md-12-3";
+			}
+		}
+	}
+
+	.wrap-content{
+		position: relative;
+		display: grid;
+		grid-gap: 30px;
+
+		.item{
+			@include transaction( all, 0.5s, ease);  
+			position: relative;
+			overflow: hidden;
+			border-radius: 12px;
+			cursor: pointer;
+
+			&:nth-child(1) {
+        		grid-area: sm-12-1;
+        	}
+        	&:nth-child(2) {
+        		grid-area: lg-12-1;
+        	}
+        	&:nth-child(3) {
+        		grid-area: md-12-1;
+        	}
+        	&:nth-child(4) {
+        		grid-area: md-12-2;
+        	}
+        	&:nth-child(5) {
+        		grid-area: sm-12-2;
+        	}
+        	&:nth-child(6) {
+        		grid-area: md-12-4;
+        	}
+        	&:nth-child(7) {
+        		grid-area: lg-12-2;
+        	}
+        	&:nth-child(8) {
+        		grid-area: md-12-3;
+        	}
+
+			&:hover{
+				@include transaction( all, 0.5s, ease);  
+				img{
+					-webkit-transition: 0.6s;
+	                transition: 0.6s;
+	        		transform: scale(1.05);
+				}
+				.content{
+					@include transaction( all, 0.5s, ease);
+					bottom: 35px;
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+
+			img{
+				-webkit-transition: 0.6s;
+	            transition: 0.6s;
+	            transform: scale(1);
+				display: block;
+				width: 100%;
+				height: 100%;
+				object-fit:cover;
+			}
+
+			.content{
+				@include transaction( all, 0.5s, ease);
+				position: absolute;
+				width: 80%;
+				max-width: 272px;
+				bottom: 5px;
+				left: 30px;
+				opacity: 0;
+				visibility: hidden;
+
+				.wrap-title{
+					display: flex;
+					align-items:center;
+					column-gap: 7px;
+					background-color: var(--primary);
+					padding: 14px 28px;
+
+					.icon{
+						display: inline-flex;
+						i{
+							font-size: 20px;
+							display: inline-flex;
+							color: #fff;
+						}
+						svg{
+							width: 20px;
+							height: 20px;
+						}
+					}
+					.title{
+						margin: 0;
+						font-size: 24px;
+						font-weight: 600;
+						line-height: 1.2;
+						color: #fff;
+						@media (max-width: 1400px) {
+							font-size: 22px;
+						}
+						@media (max-width: 767px) {
+							font-size: 20px;
+						}
+					}
+				}
+
+				.description{
+					margin: 0;
+					font-size: 22px;
+					font-weight: 500;
+					line-height: 1.2;
+					color: #fff;
+					max-width: 80px;
+					width: 40%;
+					padding: 4px 12px;
+					background-color: #ffffff4d;
+					text-align: center;
+					@media (max-width: 1400px) {
+						font-size: 20px;
+					}
+					@media (max-width: 767px) {
+						font-size: 18px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.rtl {
+	.ova-gallery-event {
+		.item {
+			.content {
+				left: unset;
+				right: 30px;
+			}
+		}
+	}
+}		

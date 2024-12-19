@@ -1,0 +1,29 @@
+.ova-icon-audio {
+	width: 100%;
+	max-width: 279px;
+	border-radius: 27px;
+	background-color: #dfdfdf;
+	padding: 8px 20px 8px 8px;
+	.waveform {
+		display: grid;
+	    grid-template-columns: 10% 90%;
+	    grid-auto-flow: column; 
+	    align-items: center;
+	    grid-column-gap : 12px;
+	    button {
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			border: unset;
+			width: 36px;
+			height: 36px;
+			border-radius: 50%;
+			background-color: #fff;
+			i {
+				color: #ff00de;
+				font-size: 14px; 
+			}
+	    }
+	}
+	
+}

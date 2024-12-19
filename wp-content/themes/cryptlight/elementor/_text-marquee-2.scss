@@ -1,0 +1,123 @@
+.ova-text-marquee-2{
+	position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    width: 100%;
+    direction: ltr;
+
+    &.direction-ltr {
+    	direction: rtl;
+    	.content-wrapper {
+			animation: ova_scroll_ltr 20s linear infinite;
+			animation-delay: -20s;
+		}
+
+		.content-wrapper-2 {
+			animation: ova_scroll2_ltr 20s linear infinite;
+			animation-delay: -10s;
+		}
+		&.duration-slow{
+			.content-wrapper {
+				animation: ova_scroll_ltr 20s linear infinite;
+				animation-delay: -20s;
+			}
+			.content-wrapper-2 {
+				animation: ova_scroll2_ltr 20s linear infinite;
+				animation-delay: -10s;
+			}
+		}
+
+		&.duration-fast{
+			.content-wrapper {
+				animation: ova_scroll_ltr 10s linear infinite;
+				animation-delay: -10s;
+			}
+			.content-wrapper-2 {
+				animation: ova_scroll2_ltr 10s linear infinite;
+				animation-delay: -5s;
+			}
+		}
+    }
+
+	.content-wrapper, .content-wrapper-2{
+		.text{
+        	font-weight: 500;
+			font-size: 130px;
+			line-height: 1;
+			text-transform: capitalize;
+			color: var(--heading);
+
+			@media(max-width: 1024px){
+				font-size: 80px;
+			}
+		}
+
+		.image{
+			position: relative;
+			display: inline-flex;
+			flex-direction: column;
+			align-items:center;
+			justify-content:center;
+			margin: 0 35px 0 10px;
+			vertical-align: bottom;
+
+			img{
+				display: inline-block;
+				width: 65px;
+				height: 65px;
+				border-radius: 50%;
+				object-fit:cover;
+				margin: 0 0 20px 0;
+			}
+
+			.line-decoration{
+				width: 85px;
+				height: 11px;
+				background-color: var(--heading);
+				display: inline-block;
+			}
+		}
+	}
+
+	.content-wrapper {
+		animation: ova_scroll 20s linear infinite;
+		animation-delay: -20s;
+	}
+
+	.spacing {
+		-webkit-box-flex: 1;
+	    -ms-flex-positive: 1;
+	    flex-grow: 1;
+	    width: 600px;
+	}
+
+	.content-wrapper-2 {
+		animation: ova_scroll2 20s linear infinite;
+		animation-delay: -10s;
+	}
+
+
+	&.duration-slow{
+		.content-wrapper {
+			animation: ova_scroll 20s linear infinite;
+			animation-delay: -20s;
+		}
+		.content-wrapper-2 {
+			animation: ova_scroll2 20s linear infinite;
+			animation-delay: -10s;
+		}
+	}
+
+	&.duration-fast{
+		.content-wrapper {
+			animation: ova_scroll 10s linear infinite;
+			animation-delay: -10s;
+		}
+		.content-wrapper-2 {
+			animation: ova_scroll2 10s linear infinite;
+			animation-delay: -5s;
+		}
+	}
+}
